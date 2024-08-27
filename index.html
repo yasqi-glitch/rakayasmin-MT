@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body>
+
+
+    <h2>JavaScript Functions</h2>
+
+
+<p>This example calls a function which performs a calculation, and returns the result:</p>
+
+<p id="demo"></p>
+
+
+<script>
+function myFunction(p1, p2) {
+    return p1 * p2;
+}
+
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+</script>
+    
+</body> -->
+
+<body>
+    <!-- <h2>Variabel dan Tipe Data JavaScript</h2>
+    <p id="output1"></p>
+    <p id="output2"> </p>
+    <p id="output3"></p>
+
+    <script>
+
+    // Deklarasi variabel
+    let numberVariable = 42; // Tipe data number
+    let stringVariable = "Hello, world!"; // Tipe data string
+    let booleanVariable = true; // Tipe data boolean
+    // Menampilkan nilai variabel
+    document.getElementById("output1").innerHTML = "Nilai dari numberVariable: " + numberVariable;
+    document.getElementById("output2").innerHTML = "Nilai dari stringVariable: " + stringVariable;
+    document.getElementById("output3").innerHTML = "Nilai dari booleanVariable: " + booleanVariable;
+
+
+    </script> -->
+    <!-- <h2>Contoh Penggunaan Operator dalam JavaScript</h2> -->
+    <!-- <p id="arithmetic"></p>
+    <p id="comparison"></p>
+    <p id="logical"></p>
+    <p id="assignment"></p> -->
+    <!-- <p id="IPK"></p> -->
+
+    <h2>Penilaian Grade Mahasiswa Berdasarkan IPK</h2>
+    <label for="ipk">Masukkan IPK Mahasiswa:</label>
+    <input type="number" id="ipk" step="0.01" min="0" max="4">
+    <button onclick="tentukanGrade()">Tentukan Grade</button>
+    <p id="hasil"></p>
+
+
+    <script>
+    // Operator Aritmatika
+        // let a = 10;
+        // let b = 5;
+        // let arithmeticResult = `
+        //     Addition: ${a + b}<br>
+        //     Subtraction: ${a - b}<br>
+        //     Multiplication: ${a * b}<br>
+        //     Division: ${a / b}<br>
+        //     Modulus: ${a & b}<br>
+        //     Exponentiation: ${a ** b}<br>
+        //     Increment: ${++a}<br>
+        //     Decrement: ${--b}
+        //     `;
+        // document.getElementById("arithmetic").innerHTML = arithmeticResult;
+
+        // // Operator Perbandingan
+        //     let x = 10;
+        //     let y = 5;
+        //     let comparisonResult = `
+        //     Equal: ${x == y} <br>
+        //     Not equal: ${x != y}<br>
+        //     Strict equal: ${x === y} <br>
+        //     Strict not equal: ${x !== y}<br>
+        //     Greater than: ${x > y}<br>
+        //     Less than: ${x < y}<br>
+        //     Greater than or equal: ${x >= y}<br>
+        //     Less than or equal: ${x <= y}
+        //     `;
+
+        //     document.getElementById("comparison").innerHTML = comparisonResult;
+
+
+
+        //     // Operator Logika
+        //     let p = true;
+        //     let q = false;
+        //     let logicalResult = `
+        //     AND: ${p && q}<br>
+        //     OR: ${p || q}<br>
+        //     NOT: ${!p}<br>
+        //     Ternary: ${p ? "True" : "False"}
+        //     `;
+
+        //     document.getElementById("logical").innerHTML = logicalResult;
+
+        //     // Operator Assignment
+        //     let m = 10;
+        //     m += 5; // m m + 5
+        //     m -= 3; // m = - 3
+        //     m *= 2 //m*2
+        //     m /= 4; // m = m = 4
+        //     m %= 3; //m=m%3
+
+        //     let assignmentResult = `Final value of m: ${m}` ;
+        //     document.getElementById("assignment").innerHTML = assignmentResult;
+
+
+    //     function tentukanGrade() {
+    //     let ipk = parseFloat(document.getElementById("ipk").value);
+    //     let grade;
+    //     // lengkapi code berikut disini
+
+    //    // let grade;
+
+    //     if (ipk > 3.5) {
+    //         grade = "Cumlaude";
+    //     } else if (ipk >= 3 && ipk <= 3.5) {
+    //         grade = "Baik";
+    //     } else {
+    //         grade = "Cukup";
+    //     }
+
+    //     console.log("Grade mahasiswa:", grade); // Output: Baik
+
+    //     document.getElementById("hasil").innerHTML = "Grade: " + grade;
+
+
+    //     }
+
+    // const targetNumber = Math.floor(Math.random() * 100) + 1;
+
+    // // Variabel untuk menyimpan jumlah percobaan
+    // let attempts = 0;
+    // let guess = 0;
+
+    // // Loop hingga tebakan benar
+    // while (guess !== targetNumber) {
+    //     // Buat tebakan random
+    //     guess = Math.floor(Math.random() * 100) + 1;
+    //     attempts++;
+    // }
+
+    // console.log(`Tebakan berhasil setelah ${attempts} kali percobaan. Angka yang ditebak adalah ${targetNumber}.`);
+    let numbers = [];
+for (let i = 0; i < 10; i++) {
+    numbers.push(Math.floor(Math.random() * 100) + 1);
+}
+
+console.log("Array of random numbers:", numbers);
+
+// Initialize variables for total, min, and max
+let total = 0;
+let min = numbers[0];
+let max = numbers[0];
+
+// Calculate total, min, and max
+// 2. Menghitung total
+    //let total = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+    }
+
+    console.log("Total:", total);
+
+    // 4. Menemukan nilai minimum
+    //let min = array[0]; // Asumsikan elemen pertama adalah yang terkecil
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] < min) {
+            min = numbers[i];
+        }
+    }
+    console.log("Min:", min);
+
+    // 5. Menemukan nilai maksimum
+    //let max = array[0]; // Asumsikan elemen pertama adalah yang terbesar
+    for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+            max = numbers[i];
+        }
+    }
+    console.log("Max:", max);
+        
+           
+
+    // Calculate the average
+    let average = total / numbers.length;
+
+    // Output the results
+    console.log("Total:", total);
+    console.log("Average:", average);
+    console.log("Minimum:", min);
+    console.log("Maximum:", max);
+           
+
+
+    </script>
+</body>
+
+</html>
